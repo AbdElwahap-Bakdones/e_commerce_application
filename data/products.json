@@ -1,0 +1,479 @@
+{
+    "Products": [
+        {
+            "id": "P001",
+            "name": "Wireless Headphones",
+            "description": "High-quality wireless headphones with noise cancellation.",
+            "price": 99.99,
+            "category": "Electronics",
+            "stock": 150,
+            "features": [
+                "Bluetooth 5.0",
+                "20 hours battery life",
+                "Noise cancellation",
+                "Built-in microphone"
+            ],
+            "ratings": {
+                "average": 4.5,
+                "totalReviews": 250
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P002",
+            "name": "Smartphone",
+            "description": "Latest model smartphone with advanced features.",
+            "price": 699.99,
+            "category": "Electronics",
+            "stock": 80,
+            "features": [
+                "128GB storage",
+                "12MP camera",
+                "5G connectivity",
+                "Face recognition"
+            ],
+            "ratings": {
+                "average": 4.7,
+                "totalReviews": 500
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P003",
+            "name": "Laptop",
+            "description": "Powerful laptop for gaming and professional use.",
+            "price": 1299.99,
+            "category": "Electronics",
+            "stock": 60,
+            "features": [
+                "16GB RAM",
+                "512GB SSD",
+                "NVIDIA GTX 1660",
+                "15.6 inch display"
+            ],
+            "ratings": {
+                "average": 3.6,
+                "totalReviews": 300
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P004",
+            "name": "Bluetooth Speaker",
+            "description": "Portable Bluetooth speaker with rich sound.",
+            "price": 49.99,
+            "category": "Electronics",
+            "stock": 200,
+            "features": [
+                "10 hours battery life",
+                "Water-resistant",
+                "Built-in microphone",
+                "Lightweight design"
+            ],
+            "ratings": {
+                "average": 4.3,
+                "totalReviews": 150
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P005",
+            "name": "Smartwatch",
+            "description": "Feature-rich smartwatch with fitness tracking.",
+            "price": 199.99,
+            "category": "Electronics",
+            "stock": 120,
+            "features": [
+                "Heart rate monitor",
+                "GPS tracking",
+                "Water-resistant",
+                "Customizable watch faces"
+            ],
+            "ratings": {
+                "average": 4.4,
+                "totalReviews": 180
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P006",
+            "name": "4K Ultra HD TV",
+            "description": "Stunning 4K Ultra HD TV with smart capabilities.",
+            "price": 799.99,
+            "category": "Electronics",
+            "stock": 50,
+            "features": [
+                "55 inch screen",
+                "Smart TV features",
+                "HDR support",
+                "Voice control"
+            ],
+            "ratings": {
+                "average": 4.8,
+                "totalReviews": 320
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P007",
+            "name": "Gaming Console",
+            "description": "Next-gen gaming console with immersive gameplay.",
+            "price": 499.99,
+            "category": "Electronics",
+            "stock": 100,
+            "features": [
+                "4K gaming",
+                "Game streaming",
+                "Fast load times",
+                "Exclusive games"
+            ],
+            "ratings": {
+                "average": 4.9,
+                "totalReviews": 450
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P008",
+            "name": "Digital Camera",
+            "description": "High-resolution digital camera for photography enthusiasts.",
+            "price": 899.99,
+            "category": "Electronics",
+            "stock": 30,
+            "features": [
+                "24MP sensor",
+                "Interchangeable lenses",
+                "4K video recording",
+                "Wi-Fi connectivity"
+            ],
+            "ratings": {
+                "average": 4.7,
+                "totalReviews": 200
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P009",
+            "name": "Tablet",
+            "description": "Versatile tablet for work and play.",
+            "price": 349.99,
+            "category": "Electronics",
+            "stock": 90,
+            "features": [
+                "10.5 inch display",
+                "64GB storage",
+                "Long battery life",
+                "Stylus support"
+            ],
+            "ratings": {
+                "average": 4.5,
+                "totalReviews": 150
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P010",
+            "name": "Fitness Tracker",
+            "description": "Monitor your health and fitness with this tracker.",
+            "price": 49.99,
+            "category": "Electronics",
+            "stock": 200,
+            "features": [
+                "Step tracking",
+                "Heart rate monitoring",
+                "Sleep tracking",
+                "Water-resistant"
+            ],
+            "ratings": {
+                "average": 4.2,
+                "totalReviews": 120
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P011",
+            "name": "Electric Kettle",
+            "description": "Fast boiling electric kettle with temperature control.",
+            "price": 29.99,
+            "category": "Home Appliances",
+            "stock": 300,
+            "features": [
+                "1.7 liters capacity",
+                "Auto shut-off",
+                "Stainless steel",
+                "Temperature settings"
+            ],
+            "ratings": {
+                "average": 4.4,
+                "totalReviews": 90
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P012",
+            "name": "Blender",
+            "description": "High-performance blender for smoothies and more.",
+            "price": 59.99,
+            "category": "Home Appliances",
+            "stock": 150,
+            "features": [
+                "1000 watts",
+                "Multiple speed settings",
+                "Easy to clean",
+                "Durable glass jar"
+            ],
+            "ratings": {
+                "average": 4.5,
+                "totalReviews": 110
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P013",
+            "name": "Air Fryer",
+            "description": "Healthy air fryer for crispy meals with less oil.",
+            "price": 89.99,
+            "category": "Home Appliances",
+            "stock": 80,
+            "features": [
+                "4.2 liters capacity",
+                "Digital display",
+                "Multiple cooking presets",
+                "Easy to clean"
+            ],
+            "ratings": {
+                "average": 4.6,
+                "totalReviews": 140
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P014",
+            "name": "Vacuum Cleaner",
+            "description": "Powerful vacuum cleaner for efficient cleaning.",
+            "price": 199.99,
+            "category": "Home Appliances",
+            "stock": 70,
+            "features": [
+                "Bagless design",
+                "HEPA filter",
+                "Multiple attachments",
+                "Lightweight"
+            ],
+            "ratings": {
+                "average": 4.3,
+                "totalReviews": 160
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P015",
+            "name": "Coffee Maker",
+            "description": "Brews delicious coffee with ease.",
+            "price": 49.99,
+            "category": "Home Appliances",
+            "stock": 250,
+            "features": [
+                "12-cup capacity",
+                "Programmable settings",
+                "Auto shut-off",
+                "Reusable filter"
+            ],
+            "ratings": {
+                "average": 4.7,
+                "totalReviews": 130
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P016",
+            "name": "Washing Machine",
+            "description": "Efficient washing machine with multiple settings.",
+            "price": 499.99,
+            "category": "Home Appliances",
+            "stock": 40,
+            "features": [
+                "Front-loading",
+                "Energy-efficient",
+                "Multiple wash cycles",
+                "Quiet operation"
+            ],
+            "ratings": {
+                "average": 4.5,
+                "totalReviews": 100
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P017",
+            "name": "Refrigerator",
+            "description": "Spacious refrigerator with energy-saving features.",
+            "price": 799.99,
+            "category": "Home Appliances",
+            "stock": 30,
+            "features": [
+                "Frost-free",
+                "Water and ice dispenser",
+                "Adjustable shelves",
+                "Energy Star rated"
+            ],
+            "ratings": {
+                "average": 4.8,
+                "totalReviews": 90
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P018",
+            "name": "Air Conditioner",
+            "description": "Energy-efficient air conditioner for cooling your space.",
+            "price": 399.99,
+            "category": "Home Appliances",
+            "stock": 20,
+            "features": [
+                "Remote control",
+                "Energy-saving mode",
+                "Quiet operation",
+                "Multiple cooling settings"
+            ],
+            "ratings": {
+                "average": 4.6,
+                "totalReviews": 80
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P019",
+            "name": "Electric Grill",
+            "description": "Indoor electric grill for delicious grilled meals.",
+            "price": 69.99,
+            "category": "Home Appliances",
+            "stock": 150,
+            "features": [
+                "Non-stick surface",
+                "Adjustable temperature",
+                "Easy to clean",
+                "Compact design"
+            ],
+            "ratings": {
+                "average": 4.4,
+                "totalReviews": 110
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P020",
+            "name": "Cookware Set",
+            "description": "Durable cookware set for all your cooking needs.",
+            "price": 99.99,
+            "category": "Home Appliances",
+            "stock": 200,
+            "features": [
+                "Non-stick coating",
+                "Oven safe",
+                "Dishwasher safe",
+                "Includes pots and pans"
+            ],
+            "ratings": {
+                "average": 4.5,
+                "totalReviews": 140
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P021",
+            "name": "Electric Toothbrush",
+            "description": "Advanced electric toothbrush for superior oral care.",
+            "price": 49.99,
+            "category": "Personal Care",
+            "stock": 300,
+            "features": [
+                "2-minute timer",
+                "Multiple brushing modes",
+                "Rechargeable battery",
+                "Waterproof design"
+            ],
+            "ratings": {
+                "average": 4.6,
+                "totalReviews": 180
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P022",
+            "name": "Hair Dryer",
+            "description": "Powerful hair dryer with multiple heat settings.",
+            "price": 39.99,
+            "category": "Personal Care",
+            "stock": 250,
+            "features": [
+                "Ionic technology",
+                "Cool shot button",
+                "Lightweight design",
+                "Multiple speed settings"
+            ],
+            "ratings": {
+                "average": 4.3,
+                "totalReviews": 150
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P023",
+            "name": "Skincare Set",
+            "description": "Complete skincare set for healthy skin.",
+            "price": 79.99,
+            "category": "Personal Care",
+            "stock": 100,
+            "features": [
+                "Moisturizer",
+                "Cleanser",
+                "Sunscreen",
+                "Anti-aging serum"
+            ],
+            "ratings": {
+                "average": 4.5,
+                "totalReviews": 200
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P024",
+            "name": "Perfume",
+            "description": "Elegant perfume with a floral scent.",
+            "price": 59.99,
+            "category": "Personal Care",
+            "stock": 150,
+            "features": [
+                "Long-lasting fragrance",
+                "Elegant bottle design",
+                "Perfect for gifting",
+                "Available in various sizes"
+            ],
+            "ratings": {
+                "average": 4.8,
+                "totalReviews": 90
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        },
+        {
+            "id": "P025",
+            "name": "Yoga Mat",
+            "description": "Non-slip yoga mat for comfortable workouts.",
+            "price": 29.99,
+            "category": "Fitness",
+            "stock": 200,
+            "features": [
+                "Extra thick",
+                "Eco-friendly material",
+                "Lightweight",
+                "Easy to carry"
+            ],
+            "ratings": {
+                "average": 3.5,
+                "totalReviews": 130
+            },
+            "images": "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell.webp"
+        }
+    ]
+}
