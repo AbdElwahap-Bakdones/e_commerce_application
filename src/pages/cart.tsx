@@ -10,7 +10,7 @@ import {
 } from "@mantine/core";
 import { SimpleProductCard } from "../components/card/simpleCard";
 import useCartStore from "../store/cartStore";
-import { BsCashCoin } from "react-icons/bs";
+import { MdOutlinePayment } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 export function Cart() {
@@ -20,10 +20,13 @@ export function Cart() {
     nav("/home/");
   };
   return (
-    <Box style={{ minHeight: "100vh" }} pb={"3rem"} pt={"md"}>
+    <Box style={{ minHeight: "100%" }} px={"xs"} mb={"5rem"} pt={"md"}>
       <Grid justify="center" align="center">
         {productInCart.carts.carts?.map((product) => (
-          <Grid.Col span={{ base: 12, md: 6, lg: 5 }} key={product.id}>
+          <Grid.Col
+            span={{ xl: "auto", lg: 4, md: 6, sm: 12, base: 12 }}
+            key={product.id}
+          >
             <Center>
               <SimpleProductCard {...product} />
             </Center>
@@ -40,17 +43,20 @@ export function Cart() {
             padding: "lg",
           }}
         >
-          <Group>
+          <Group mb={"lg"}>
             <Button
               onClick={() => {
                 // handleAddToCart(id, price, image);
               }}
-              variant="white"
+              variant="filled"
               radius="xl"
-              style={{ flex: 1 }}
+              style={{ flex: 1, borderColor: "#fcd128", fontStyle: "unset" }}
+              color="#ffff"
             >
-              {" Pay ."}
-              <BsCashCoin style={{ color: "goldenrod" }} size={"1.5rem"} />
+              <MdOutlinePayment style={{ color: "#fcd128" }} size={"1.5rem"} />
+              <Text c={"blue"} size="1.5rem">
+                Pay : {productInCart.carts.totalPrice.toFixed(2)}$
+              </Text>
             </Button>
             <Button
               bg={"blue"}
@@ -59,7 +65,7 @@ export function Cart() {
               radius="xl"
               style={{ flex: 1 }} // Allow buttons to grow equally
             >
-              {" Close "}
+              <Text size="1.5rem">Close</Text>{" "}
             </Button>
           </Group>
         </Container>

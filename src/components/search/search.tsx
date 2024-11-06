@@ -1,19 +1,35 @@
 import { Autocomplete } from "@mantine/core";
-import { useProductsContext } from "../../context/products";
+import useProductsStore from "../../store/useProductsStore";
+import CustomLoader from "../Loader";
+import useSearch from "../../store/useSearch";
+import { SetStateAction, useState } from "react";
 
 export function SearchBar() {
-  const products = useProductsContext();
-  const name = products.map((prod) => {
-    return prod.name;
-  });
+  const { Products } = useProductsStore();
+  const { set_search_key, search_key } = useSearch();
+  const [searchValue, setSearchValue] = useState("");
+  if (!Products) return <CustomLoader />;
 
+  console.log(Products);
+
+  if (!Products) return <CustomLoader />;
+
+  const name = Products.map((prod) => prod.name);
+
+  const handleSearch = (value: any) => {
+    setSearchValue(value);
+    set_search_key(value);
+  };
   return (
     <Autocomplete
+      style={{
+        zIndex: 1000,
+      }}
       data={name}
-      //   renderOption={renderAutocompleteOption}
+      value={searchValue}
+      onChange={handleSearch}
       maxDropdownHeight={300}
-      label="Products"
-      placeholder="Search for products"
+      placeholder={"Search for products"}
     />
   );
 }

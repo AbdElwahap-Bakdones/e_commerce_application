@@ -3,11 +3,15 @@ import App from "./App";
 import { QueryClient, QueryClientProvider } from "react-query";
 import "@mantine/core/styles.css";
 import { createTheme, MantineProvider } from "@mantine/core";
-import { BrowserRouter } from "react-router-dom";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./main.css";
+import ProtectedRouteUser, { GuestRoute } from "./auth/ProtectedRoute";
+import EntryPage from "./pages/EntryPage";
 const theme = createTheme({
-  /** Put your mantine theme override here */
+  fontFamily: "Open Sans, sans-serif",
+  primaryColor: "cyan",
 });
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -17,12 +21,30 @@ const queryClient = new QueryClient({
     },
   },
 });
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
-    <MantineProvider theme={theme}>
-      <QueryClientProvider client={queryClient}>
+const router = createBrowserRouter([
+  {
+    path: "/*",
+    element: (
+      <ProtectedRouteUser>
         <App />
-      </QueryClientProvider>
-    </MantineProvider>
-  </BrowserRouter>
+      </ProtectedRouteUser>
+    ),
+  },
+
+  {
+    path: "/Entry/*",
+    element: (
+      <GuestRoute>
+        <EntryPage />
+      </GuestRoute>
+    ),
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <MantineProvider theme={theme} defaultColorScheme="light">
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  </MantineProvider>
 );

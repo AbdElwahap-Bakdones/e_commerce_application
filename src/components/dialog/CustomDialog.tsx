@@ -9,7 +9,7 @@ import {
   ScrollArea,
 } from "@mantine/core";
 import { SimpleProductCard } from "../card/simpleCard";
-import useProducts from "../../hooks/product/get_products";
+import useProducts from "../../hooks/product/useGetProducts";
 import useCartStore from "../../store/cartStore";
 
 interface CustomDialogProps {

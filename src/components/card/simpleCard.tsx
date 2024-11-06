@@ -6,6 +6,7 @@ import {
   Button,
   Container,
   Anchor,
+  Box,
 } from "@mantine/core";
 import {} from "@tabler/icons-react";
 import classes from "./FeaturesCard.module.css";
@@ -33,26 +34,44 @@ export function SimpleProductCard(Props: CartType) {
     deleteProductsFromCart(id);
   };
   const { image, id, price, count } = Props;
+  const getProductPrice = () => {
+    const totalPrice = price * count;
+    return totalPrice.toFixed(2);
+  };
   return (
-    <Card withBorder radius="md" className={classes.card}>
+    <Card
+      withBorder
+      radius="md"
+      m={0}
+      className={classes.card}
+      style={{ justifyContent: "center", alignItems: "center" }}
+    >
       <Card.Section className={classes.imageSection}>
-        <Image fit="fill" src={image} alt={"name"} />
+        <Image
+          fit="contain"
+          src={image}
+          alt={"name"}
+          style={{
+            maxWidth: "100%",
+            height: "20rem",
+            display: "inline-block",
+          }}
+        />
       </Card.Section>
-
       <Card.Section className={classes.section}>
-        <Group gap={30} justify="space-between">
+        <Group gap={30} justify="space-around">
           <div style={{ width: "100px" }}>
             <Text
               fz="xl"
               fw={700}
               style={{
                 lineHeight: 1,
-                color: "goldenrod",
+                color: "black",
                 width: "100%",
                 textOverflow: "ellipsis",
               }}
             >
-              ${price * count}
+              {getProductPrice()}$
             </Text>
           </div>
 
@@ -62,31 +81,31 @@ export function SimpleProductCard(Props: CartType) {
                 handleDeleteToCart(id);
               }}
             >
-              <IoMdRemoveCircle style={{ color: "red" }} size={"2rem"} />
+              <IoMdRemoveCircle style={{ color: "#262c9c" }} size={"2.5rem"} />
             </Anchor>
+            <div>
+              <Text
+                fz="xl"
+                fw={700}
+                style={{
+                  lineHeight: 1,
+                  color: "white",
+                  borderRadius: "0.5rem",
+                }}
+                bg={"#228BE6"}
+                p="xs"
+              >
+                {count}
+              </Text>
+            </div>
             <Anchor
               onClick={() => {
                 handleAddToCart(id, price, image);
               }}
             >
-              <IoAddCircle style={{ color: "green" }} size={"2rem"} />
+              <IoAddCircle style={{ color: "#262c9c" }} size={"2.5rem"} />
             </Anchor>
           </Group>
-          <div>
-            <Text
-              fz="xl"
-              fw={700}
-              style={{
-                lineHeight: 1,
-                color: "white",
-                borderRadius: "4rem",
-              }}
-              bg={"goldenrod"}
-              p="xs"
-            >
-              {count}
-            </Text>
-          </div>
         </Group>
       </Card.Section>
     </Card>

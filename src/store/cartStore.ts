@@ -1,14 +1,14 @@
 import { create } from "zustand";
 import { CartStorageType } from "../actions/ManageCart";
 
-interface CartStore {
+interface StoreType {
   carts: CartStorageType;
   add_cart: (id: string, price: number, image: string) => void;
   set_cart: (cart: CartStorageType) => void;
   delete_cart: (id: string) => void;
 }
 
-const useCartStore = create<CartStore>((set) => ({
+const useCartStore = create<StoreType>((set) => ({
   carts: { carts: [], totalCount: 0, totalPrice: 0 },
 
   add_cart: (id: string, price: number, image: string) =>

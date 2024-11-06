@@ -7,6 +7,10 @@ import {
   Button,
   Stack,
   Center,
+  ScrollArea,
+  Title,
+  Box,
+  InputWrapper,
 } from "@mantine/core";
 import {} from "@tabler/icons-react";
 import classes from "./FeaturesCard.module.css";
@@ -16,10 +20,7 @@ import { MdOutlineReviews } from "react-icons/md";
 import { MdOutlineWarehouse } from "react-icons/md";
 import { FaCartPlus } from "react-icons/fa6";
 import useCartStore from "../../store/cartStore";
-import {
-  addProductsToCart,
-  deleteProductsFromCart,
-} from "../../actions/ManageCart";
+import { addProductsToCart } from "../../actions/ManageCart";
 // import StorageCart from "../../actions/addProductsToCart";
 
 export function ProductCard(Props: ProductsType) {
@@ -33,11 +34,28 @@ export function ProductCard(Props: ProductsType) {
   const { images, name, description, category, id, price, ratings, stock } =
     Props;
   return (
-    <Center>
-      <Card withBorder radius="md" className={classes.card}>
-        <Card.Section className={classes.imageSection}>
-          <Image src={images} alt={name} />
-        </Card.Section>
+    <Center key={id + "card"}>
+      <Card withBorder radius="lg" className={classes.card}>
+        <Center pb={"md"}>
+          <Card.Section
+            className={classes.imageSection}
+            style={{
+              textAlign: "center",
+              maxWidth: "20rem",
+              maxHeight: "15rem",
+              minHeight: "13rem",
+            }}
+            mb={"xs"}
+          >
+            <Image
+              src={images}
+              alt={name}
+              style={{
+                display: "inline-block",
+              }}
+            />
+          </Card.Section>
+        </Center>
         <Stack>
           <Group justify="space-between" wrap="nowrap">
             <Text size="1.5rem" fw={700} style={{ color: "goldenrod" }}>
@@ -46,18 +64,28 @@ export function ProductCard(Props: ProductsType) {
             <Badge
               color={
                 ratings.average > 4.5
-                  ? "yellow"
+                  ? "blue"
                   : ratings.average > 4
                   ? "green"
-                  : "blue"
+                  : "red"
               }
             >
               {ratings.average} <MdStarRate />
             </Badge>
           </Group>
-          <Text fz="xs" c="dimmed">
-            {description}
-          </Text>
+          <ScrollArea
+            h={"3.5rem"}
+            type="auto"
+            offsetScrollbars
+            scrollHideDelay={3000}
+            scrollbarSize={10}
+          >
+            <Box maw={"25rem"}>
+              <Title textWrap="wrap" order={2} fz="sm" c="dimmed">
+                {description}
+              </Title>
+            </Box>
+          </ScrollArea>
         </Stack>
         <Card.Section className={classes.section} mt="md">
           <Group justify="space-between" wrap="nowrap">
@@ -93,10 +121,15 @@ export function ProductCard(Props: ProductsType) {
               }}
               variant="outline"
               radius="xl"
-              style={{ flex: 0.5 }}
+              // style={{ flex: 0.5 }}
             >
-              {" Add to Cart "}
-              <FaCartPlus style={{ color: "goldenrod" }} size={"1.5rem"} />
+              <Group justify="space-between">
+                <Title textWrap="nowrap" fz="md" c="goldenrod">
+                  {" "}
+                  {" Add to Cart "}
+                </Title>
+                <FaCartPlus style={{ color: "goldenrod" }} size={"20px"} />
+              </Group>
             </Button>
           </Group>
         </Card.Section>

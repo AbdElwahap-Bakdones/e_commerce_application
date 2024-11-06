@@ -5,7 +5,10 @@ export interface CartStorageType {
   totalPrice: number;
   totalCount: number;
 }
-
+export const get_cart_storage: () => CartStorageType | null = () => {
+  const cart = localStorage.getItem("cart");
+  return cart ? JSON.parse(cart) : null;
+};
 function getCartFromLocalStorage(): CartStorageType {
   const cart = localStorage.getItem("cart");
   return cart ? JSON.parse(cart) : { carts: [], totalPrice: 0, totalCount: 0 };
