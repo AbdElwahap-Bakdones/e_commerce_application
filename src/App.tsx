@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import useCartStore from "./store/cartStore";
 import { CartStorageType, get_cart_storage } from "./actions/ManageCart";
 import { HeaderMegaMenu } from "./components/header/header";
-import DashBoard from "./pages/signUp/DashBoard";
+import DashBoard from "./pages/DashBoard";
 import ProtectedRouteUser, {
   ProtectedRouteManager,
 } from "./auth/ProtectedRoute";
@@ -56,10 +56,24 @@ function App() {
         // mt={"6rem"}
       >
         <Routes>
-          <Route path="/*" element={<HomePage />} />
-          <Route path="cart/" element={<Cart />} />
           <Route
-            path="Dashboard/"
+            path="/*"
+            element={
+              <ProtectedRouteUser>
+                <HomePage />
+              </ProtectedRouteUser>
+            }
+          />
+          <Route
+            path="cart/"
+            element={
+              <ProtectedRouteUser>
+                <Cart />
+              </ProtectedRouteUser>
+            }
+          />
+          <Route
+            path="Dashboard/*"
             element={
               <ProtectedRouteManager>
                 <DashBoard />

@@ -63,7 +63,7 @@ export default function TableProducts() {
                 data={product}
                 selection={selection}
                 toggleRow={toggleRow}
-                key={"row"}
+                key={product.id}
               />
             ))}
         </Table.Tbody>

@@ -2,6 +2,8 @@ import { PropsWithChildren, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import AuthStore from "../store/authStore";
+import DashBoard from "../pages/DashBoard";
+import { HomePage } from "../pages/home";
 
 type ProtectedRouteProps = PropsWithChildren;
 

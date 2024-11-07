@@ -6,7 +6,6 @@ import {
   Text,
   FileInput,
   Box,
-  Image,
   Avatar,
 } from "@mantine/core";
 import useGetCategories from "../../hooks/product/useGetCategories";
@@ -40,6 +39,7 @@ function AddRow() {
   const [features, setFeatures] = useState<string>("");
   const [image, setImage] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const [errors, setErrors] = useState<Errors>({});
 
@@ -62,8 +62,8 @@ function AddRow() {
 
   const handleSubmit = () => {
     if (validate()) {
-      const jsonData: ProductsType = {
-        id: "0",
+      const jsonData: Omit<ProductsType, "id"> = {
+        // id: "0",
         name,
         description,
         price: parseFloat(price),
@@ -74,6 +74,7 @@ function AddRow() {
         images: imagePreview || "",
       };
       console.log(JSON.stringify(jsonData));
+      setLoading(true);
       mutate(jsonData);
     }
   };
@@ -91,9 +92,14 @@ function AddRow() {
   if (!data || error || isFetching) return <CustomLoader />;
 
   return (
+    // <Center>
     <Table.Tr key={"new"}>
       <Table.Td>
-        <Button onClick={handleSubmit}>Save</Button>
+        {loading ? (
+          <CustomLoader />
+        ) : (
+          <Button onClick={handleSubmit}>Save</Button>
+        )}
       </Table.Td>{" "}
       <Table.Td></Table.Td>
       <Table.Td style={{ color: "#FCD128" }}>
@@ -165,7 +171,6 @@ function AddRow() {
           {imagePreview && (
             <Avatar src={imagePreview} alt="Image Preview" size={"xl"} />
           )}
-
           <FileInput
             accept="image/png,image/jpeg"
             placeholder="Image"
@@ -178,6 +183,7 @@ function AddRow() {
         </Box>
       </Table.Td>
     </Table.Tr>
+    // </Center>
   );
 }
 

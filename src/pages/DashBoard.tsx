@@ -1,5 +1,5 @@
 import React from "react";
-import TableProducts from "../../components/table/Table";
+import TableProducts from "../components/table/Table";
 
 function DashBoard() {
   return <TableProducts />;

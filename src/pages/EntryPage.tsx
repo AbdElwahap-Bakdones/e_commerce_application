@@ -4,7 +4,7 @@ import { HeaderMegaMenu } from "../components/header/header";
 import { Login } from "./login/login";
 import { Route, Routes } from "react-router-dom";
 import { SignUp } from "./signUp/signUp";
-import DashBoard from "./signUp/DashBoard";
+import DashBoard from "./DashBoard";
 
 function EntryPage() {
   return (
